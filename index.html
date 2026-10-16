@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title> دعوة رسمية من ادونيس إلى الاميرة  ♡</title>
+<title>دعوة رسمية من ادونيس إلى الاميرة ♡</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&family=Special+Elite&display=swap" rel="stylesheet">
@@ -63,11 +63,12 @@ h2{font-size:clamp(20px,4.6vw,27px);font-weight:900;line-height:1.4;margin-botto
 
   <section class="screen active" id="screenIntro">
     <div class="eyebrow">استدعاء رسمي من الإدارة العليا</div>
-    <h1>غريس… حابة تعزميني ع طلعة؟</h1>
+    <!-- غيرت الجملة هون -->
+    <h1>غريس… بدك تطلعي معي؟</h1>
     <p class="lede">فكري منيح قبل ما تجاوبي… مستقبلك العاطفي بيعتمد عهالقرار 🙂</p>
     <p class="lede small">اختاري براحتك… بس في جواب أحلى من التاني</p>
     <button class="btn" id="startBtn">افتحي الملف ♡</button>
-    <p class="foot">أهلاً بالمتّهمة… قصدي بالحبيبة! ♡<br>٤ قرارات صغيرة · طلعة كبيرة · حرية اختيار… تقريباً</p>
+    <p class="foot">أهلاً بالمتّهمة… قصدي بالحبيبة! ♡<br>٦ قرارات صغيرة · طلعة كبيرة · حرية اختيار… تقريباً</p>
   </section>
 
   <section class="screen" id="screenQuiz">
@@ -93,11 +94,74 @@ h2{font-size:clamp(20px,4.6vw,27px);font-weight:900;line-height:1.4;margin-botto
 
 <script>
 const QUESTIONS = [
-  { key: "المكان", title: "لوين حابة نروح؟", sub: "اختاري براحتك… بس في مكان واحد بيجنن 😉", options: [ { label: "كافيه", value: "كافيه", correct: true }, { label: "مطعم", value: "مطعم" }, { label: "مشوار بالسيارة", value: "مشوار بالسيارة" }, { label: "نتمشى", value: "نتمشى" } ] },
-  { key: "الشرب", title: "شو حابة نشرب بالكافيه؟", sub: "كل شي متوفر… بس في شي واحد بيرفع المزاج ☕", options: [ { label: "قهوة", value: "قهوة", correct: true }, { label: "ايس كوفي", value: "ايس كوفي" }, { label: "عصير", value: "عصير" }, { label: "كولا", value: "كولا" } ] },
-  { key: "الأركيلة", title: "بدك أركيلة؟", sub: "سؤال مهم جداً… فكري منيح 😏", options: [ { label: "اي", value: "اي", correct: true }, { label: "لا", value: "لا", runaway: true } ] },
-  { key: "المعسل", title: "شو نوع المعسل؟", sub: "النوع الصح بيغير الطلة كلها 😌", options: [ { label: "بولو", value: "بولو", correct: true }, { label: "لوف", value: "لوف" }, { label: "عنب ونعنع", value: "عنب ونعنع" }, { label: "تفاحتين", value: "تفاحتين" } ] }
+  { 
+    key: "المكان", 
+    title: "لوين حابة نروح؟", 
+    sub: "اختاري براحتك… بس في مكان واحد بيجنن 😉", 
+    options: [ 
+      { label: "كافيه", value: "كافيه", correct: true }, 
+      { label: "مطعم", value: "مطعم" }, 
+      { label: "مشوار بالسيارة", value: "مشوار بالسيارة" }, 
+      { label: "نتمشى", value: "نتمشى" } 
+    ] 
+  },
+  { 
+    key: "الشرب", 
+    title: "شو حابة نشرب بالكافيه؟", 
+    sub: "كل شي متوفر… بس في شي واحد بيرفع المزاج ☕", 
+    options: [ 
+      { label: "قهوة", value: "قهوة", correct: true }, 
+      { label: "ايس كوفي", value: "ايس كوفي" }, 
+      { label: "عصير", value: "عصير" }, 
+      { label: "كولا", value: "كولا" } 
+    ] 
+  },
+  { 
+    key: "الأركيلة", 
+    title: "بدك أركيلة؟", 
+    sub: "سؤال مهم جداً… فكري منيح 😏", 
+    options: [ 
+      { label: "اي", value: "اي", correct: true }, 
+      { label: "لا", value: "لا", runaway: true } 
+    ] 
+  },
+  { 
+    key: "المعسل", 
+    title: "شو نوع المعسل؟", 
+    sub: "النوع الصح بيغير الطلة كلها 😌", 
+    options: [ 
+      { label: "بولو", value: "بولو", correct: true }, 
+      { label: "لوف", value: "لوف" }, 
+      { label: "عنب ونعنع", value: "عنب ونعنع" }, 
+      { label: "تفاحتين", value: "تفاحتين" } 
+    ] 
+  },
+  // السؤال الجديد: اليوم
+  { 
+    key: "اليوم", 
+    title: "أي يوم بتحبي نلتقي؟", 
+    sub: "اختاري اليوم اللي بيناسبك 😉", 
+    options: [ 
+      { label: "الخميس", value: "الخميس" }, 
+      { label: "الجمعة", value: "الجمعة" }, 
+      { label: "التنين", value: "التنين" }, 
+      { label: "التلاتا", value: "التلاتا", correct: true } 
+    ] 
+  },
+  // السؤال الجديد: الساعة
+  { 
+    key: "الساعة", 
+    title: "أي ساعة؟", 
+    sub: "الوقت مهم… اختاري منيح 😌", 
+    options: [ 
+      { label: "خمسة", value: "خمسة" }, 
+      { label: "ستة", value: "ستة" }, 
+      { label: "سبعة", value: "سبعة", correct: true }, 
+      { label: "تمانية", value: "تمانية" } 
+    ] 
+  }
 ];
+
 const TRAP_TEXTS = ["لا","لأ؟","متأكد؟","فكّر مرة تانية","غلط","ما بتقدر","الإدارة ما بتوافق","خلص…","مستحيل","ما في"];
 const AR_DIGITS = "٠١٢٣٤٥٦٧٨٩";
 const toAr = n => String(n).replace(/\d/g, d => AR_DIGITS[d]);
